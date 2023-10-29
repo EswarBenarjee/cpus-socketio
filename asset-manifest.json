@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cpus-socketio/static/css/main.13b97b94.css",
+    "main.js": "/cpus-socketio/static/js/main.19cc674a.js",
+    "index.html": "/cpus-socketio/index.html",
+    "main.13b97b94.css.map": "/cpus-socketio/static/css/main.13b97b94.css.map",
+    "main.19cc674a.js.map": "/cpus-socketio/static/js/main.19cc674a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13b97b94.css",
+    "static/js/main.19cc674a.js"
+  ]
+}
