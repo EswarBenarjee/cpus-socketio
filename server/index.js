@@ -18,6 +18,8 @@ const socketio = require("socket.io");
 const socketMain = require("./socketMain");
 // const expressMain = require('./expressMain');
 
+console.log("Hello Sockets");
+
 const port = 8181;
 const num_processes = require("os").cpus().length;
 // Brew breaks for me more than it solves a problem, so I
