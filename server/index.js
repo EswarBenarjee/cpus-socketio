@@ -93,7 +93,7 @@ if (cluster.isMaster) {
     cors: {
       origin: [
         "https://eswarbenarjee.in/cpus-socketio",
-        "https://cpus-socketio-node-client.vercel.app",
+        "https://cpus-node-client.onrender.com",
       ],
     },
   });
