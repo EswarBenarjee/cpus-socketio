@@ -87,7 +87,7 @@ if (cluster.isMaster) {
   // console.log("Worker listening...");
   const io = socketio(server, {
     cors: {
-      origin: "*",
+      origin: "https://eswarbenarjee.in/",
     },
   });
 

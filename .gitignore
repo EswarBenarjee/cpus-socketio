@@ -1,6 +1,15 @@
-server/node_modules/
-server/config/default.json
+# Ignore log files
+*.log
 
-node-client/node_modules/
+# Ignore environment variables file
+.env
 
-react-client/
+node_modules/
+
+config/default.json
+
+# Ignore all node_modules folders in subfolders
+**/node_modules
+
+# Ignore all config default.json files in subfolders
+**/config/default.json

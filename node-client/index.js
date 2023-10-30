@@ -7,7 +7,7 @@
 const os = require("os");
 
 const io = require("socket.io-client");
-const socket = io("http://127.0.0.1:8181");
+const socket = io("https://jazzy-sunburst-f60785.netlify.app/");
 
 socket.on("connect", () => {
   const nI = os.networkInterfaces();
