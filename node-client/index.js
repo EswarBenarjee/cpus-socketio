@@ -9,8 +9,6 @@ const os = require("os");
 const io = require("socket.io-client");
 const socket = io("https://cpus-socketio-api.vercel.app");
 
-console.log("Connecting to Socket");
-
 socket.on("connect", () => {
   const nI = os.networkInterfaces();
   let macA;
@@ -126,4 +124,7 @@ const getCpuLoad = () => {
   });
 };
 
-export default socket;
+const express = require("express");
+let app = express();
+
+export default app;
