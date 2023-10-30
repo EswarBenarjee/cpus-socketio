@@ -1,7 +1,0 @@
-{
-  "name": "my-project",
-  "version": 2,
-  "runtime": "node",
-  "entrypoint": "index.js",
-  "public": [".", "public"]
-}
