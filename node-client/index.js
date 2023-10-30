@@ -125,3 +125,8 @@ const getCpuLoad = () => {
     }, 1000);
   });
 };
+
+const express = require("express");
+let app = express();
+
+module.exports = app;
