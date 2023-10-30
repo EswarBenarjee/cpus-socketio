@@ -125,3 +125,5 @@ const getCpuLoad = () => {
     }, 1000);
   });
 };
+
+export default socket;
