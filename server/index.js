@@ -29,8 +29,6 @@ const num_processes = require("os").cpus().length;
 const io_redis = require("socket.io-redis");
 const farmhash = require("farmhash");
 
-let io;
-
 if (cluster.isMaster) {
   // This stores our workers. We need to keep them to be able to reference
   // them based on source IP address. It's also useful for auto-restart,
@@ -69,7 +67,7 @@ if (cluster.isMaster) {
   // module INSTEAD OF the http module. Express will use http, but we need
   // an independent tcp port open for cluster to work. This is the port that
   // will face the internet
-  io = net.createServer({ pauseOnConnect: true }, (connection) => {
+  const server = net.createServer({ pauseOnConnect: true }, (connection) => {
     // We received a connection and need to pass it to the appropriate
     // worker. Get the worker for this connection's source IP and pass
     // it the connection.
@@ -77,7 +75,7 @@ if (cluster.isMaster) {
     worker.send("sticky-session:connection", connection);
   });
 
-  io.listen(port);
+  server.listen(port);
   console.log(`Master listening on port ${port}`);
 } else {
   // Note we don't use a port here because the master listens on it for us.
@@ -89,7 +87,7 @@ if (cluster.isMaster) {
   const server = app.listen(0, "localhost");
 
   // console.log("Worker listening...");
-  io = socketio(server, {
+  const io = socketio(server, {
     cors: {
       origin: [
         "https://eswarbenarjee.in/cpus-socketio",
@@ -124,5 +122,3 @@ if (cluster.isMaster) {
     connection.resume();
   });
 }
-console.log("hello Sockets");
-module.exports = io;
