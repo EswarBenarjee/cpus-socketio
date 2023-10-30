@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
 
 const config = require("config");
-const db = config.get("mongoURI");
+const db = config.get(
+  "mongodb+srv://eswar:gdYN6TFvXVenMvvm@cluster0.tr2cllj.mongodb.net/?retryWrites=true&w=majority"
+);
 
 mongoose
   .connect(db)
