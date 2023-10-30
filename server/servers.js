@@ -88,8 +88,8 @@ if (cluster.isMaster) {
   const io = socketio(server, {
     cors: {
       origin: [
-        "https://eswarbenarjee.in/",
-        "https://cpus-socketio-node-client.vercel.app/",
+        "https://eswarbenarjee.in/cpus-socketio",
+        "https://cpus-socketio-node-client.vercel.app",
       ],
     },
   });

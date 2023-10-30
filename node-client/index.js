@@ -7,7 +7,7 @@
 const os = require("os");
 
 const io = require("socket.io-client");
-const socket = io("https://cpus-socketio-api.vercel.app/");
+const socket = io("https://cpus-socketio-api.vercel.app");
 
 socket.on("connect", () => {
   const nI = os.networkInterfaces();
