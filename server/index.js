@@ -62,21 +62,7 @@ if (cluster.isMaster) {
   const worker_index = function (ip, len) {
     return farmhash.fingerprint32(ip) % len; // Farmhash is the fastest and works with IPv6, too
   };
-
-  // in this case, we are going to start up a tcp connection via the net
-  // module INSTEAD OF the http module. Express will use http, but we need
-  // an independent tcp port open for cluster to work. This is the port that
-  // will face the internet
-  const server = net.createServer({ pauseOnConnect: true }, (connection) => {
-    // We received a connection and need to pass it to the appropriate
-    // worker. Get the worker for this connection's source IP and pass
-    // it the connection.
-    let worker = workers[worker_index(connection.remoteAddress, num_processes)];
-    worker.send("sticky-session:connection", connection);
-  });
-
-  server.listen(port);
-  console.log(`Master listening on port ${port}`);
+ 
 } else {
   // Note we don't use a port here because the master listens on it for us.
   let app = express();
