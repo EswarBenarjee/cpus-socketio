@@ -87,7 +87,10 @@ if (cluster.isMaster) {
   // console.log("Worker listening...");
   const io = socketio(server, {
     cors: {
-      origin: "https://eswarbenarjee.in/",
+      origin: [
+        "https://eswarbenarjee.in/",
+        "https://cpus-socketio-node-client.vercel.app/",
+      ],
     },
   });
 
