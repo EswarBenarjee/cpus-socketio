@@ -94,6 +94,10 @@ if (cluster.isMaster) {
     },
   });
 
+  io.of("/").adapter.on("error", (err) => {
+    console.log("adapter error", err);
+  });
+
   // Tell Socket.IO to use the redis adapter. By default, the redis
   // server is assumed to be on localhost:6379. You don't have to
   // specify them explicitly unless you want to change them.
