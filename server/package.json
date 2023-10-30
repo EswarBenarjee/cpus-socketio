@@ -11,7 +11,7 @@
     "socket.io-redis": "^6.1.1"
   },
   "scripts": {
-    "start": "node servers",
-    "dev": "nodemon servers"
+    "start": "node index",
+    "dev": "nodemon index"
   }
 }
