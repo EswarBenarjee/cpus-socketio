@@ -9,6 +9,16 @@
 
 //See https://github.com/elad/node-cluster-socket.io
 
+const redis = require("redis");
+const client = redis.createClient();
+
+// This is required so your error doesn't bubble
+// upwards and kills your instance
+
+client.on("error", function (err) {
+  console.log("Error " + err);
+});
+
 const express = require("express");
 var cors = require("cors");
 const cluster = require("cluster");
