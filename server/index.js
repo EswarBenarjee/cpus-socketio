@@ -88,7 +88,7 @@ if (cluster.isMaster) {
   const io = socketio(server, {
     cors: {
       origin: [
-        "https://eswarbenarjee.in/cpus-socketio",
+        "https://eswarbenarjee.in",
         "https://cpus-node-client.onrender.com",
       ],
     },
