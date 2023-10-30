@@ -1,4 +1,4 @@
-require("./config/db");
+require("./db");
 
 const Machine = require("./models/Machine");
 
