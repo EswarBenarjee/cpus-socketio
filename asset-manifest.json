@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/cpus-socketio/static/css/main.13b97b94.css",
-    "main.js": "/cpus-socketio/static/js/main.86ddff49.js",
+    "main.js": "/cpus-socketio/static/js/main.be1ad7c2.js",
     "index.html": "/cpus-socketio/index.html",
     "main.13b97b94.css.map": "/cpus-socketio/static/css/main.13b97b94.css.map",
-    "main.86ddff49.js.map": "/cpus-socketio/static/js/main.86ddff49.js.map"
+    "main.be1ad7c2.js.map": "/cpus-socketio/static/js/main.be1ad7c2.js.map"
   },
   "entrypoints": [
     "static/css/main.13b97b94.css",
-    "static/js/main.86ddff49.js"
+    "static/js/main.be1ad7c2.js"
   ]
 }
