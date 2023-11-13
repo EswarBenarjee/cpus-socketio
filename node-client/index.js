@@ -9,7 +9,7 @@ const os = require("os");
 const io = require("socket.io-client");
 const socket = io("https://cpus-socketio-api.onrender.com");
 
-console.log("Hello Sockets");
+// console.log("Hello Sockets");
 
 socket.on("connect", () => {
   const nI = os.networkInterfaces();
@@ -134,7 +134,7 @@ app.get("/", (req, res) => {
 });
 
 app.listen(5000, () => {
-  console.log("Server is running on port 8181");
+  // console.log("Server is running on port 8181");
 });
 
 module.exports = app;

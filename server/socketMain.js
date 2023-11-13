@@ -12,7 +12,7 @@ function socketMain(io, socket) {
     } else if (key === "uiasndlsadnjk") {
       // Valid UI Client
       socket.join("ui");
-      console.log("ui- client joined");
+      // console.log("ui- client joined");
 
       Machine.find().then((machines) => {
         if (machines) {
@@ -42,7 +42,7 @@ function socketMain(io, socket) {
     macA = perfData.macA;
     // Check mongo
     let mongooseRes = await checkAndAdd(perfData);
-    console.log(mongooseRes);
+    // console.log(mongooseRes);
   });
 
   socket.on("perfData", (perfData) => {

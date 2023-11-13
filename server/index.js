@@ -16,7 +16,7 @@ const client = redis.createClient();
 // upwards and kills your instance
 
 client.on("error", function (err) {
-  console.log("Error " + err);
+  // console.log("Error " + err);
 });
 
 const express = require("express");
@@ -84,7 +84,7 @@ if (cluster.isMaster) {
   });
 
   server.listen(port);
-  console.log(`Master listening on port ${port}`);
+  // console.log(`Master listening on port ${port}`);
 } else {
   // Note we don't use a port here because the master listens on it for us.
   let app = express();
@@ -102,7 +102,7 @@ if (cluster.isMaster) {
   });
 
   io.of("/").adapter.on("error", (err) => {
-    console.log("adapter error", err);
+    // console.log("adapter error", err);
   });
 
   // Tell Socket.IO to use the redis adapter. By default, the redis
@@ -115,7 +115,7 @@ if (cluster.isMaster) {
   // on connection, send the socket over to our module with socket stuff
   io.on("connection", function (socket) {
     socketMain(io, socket);
-    console.log(`connected to worker: ${cluster.worker.id}`);
+    // console.log(`connected to worker: ${cluster.worker.id}`);
   });
 
   // Listen to messages sent from the master. Ignore everything else.
